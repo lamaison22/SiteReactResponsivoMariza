@@ -1,0 +1,29 @@
+.r-wrapper{
+  max-height: 35rem;
+}
+
+.r-container {
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.r-head{
+  margin-bottom: 2rem;
+}
+
+.swiper-horizontal{
+  overflow: visible;
+}
+
+
+
+@media (max-width: 640px) {
+  .r-head{
+  align-items: center;
+  }
+  .r-buttons{
+    position: initial;
+  }
+}
