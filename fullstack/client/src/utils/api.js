@@ -1,8 +1,8 @@
-import axios from 'axios'
+import AXIOS from 'axios'
 import dayjs from "dayjs";
 import { toast } from "react-toastify";
 import React from "react";
-export const api = axios.create({
+export const api = AXIOS.create({
   baseURL: "http://localhost:8000/api",
 });
 
