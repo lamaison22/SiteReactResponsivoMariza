@@ -3,9 +3,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "postinstall": "prisma generate",
-    "dev": "next dev",
-    "build": "next build", 
-    "lint": "next lint"
+    "CI":"false"
   },
 
 
