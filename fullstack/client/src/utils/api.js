@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import { toast } from "react-toastify";
 import React from "react";
 export const api = AXIOS.create({
-  baseURL: `${env("SERVER_URL")}/api`,
+  baseURL: `${import.meta.env.VITE_SERVER_URL}/api`,
 
 });
 
