@@ -3,7 +3,8 @@ import dayjs from "dayjs";
 import { toast } from "react-toastify";
 import React from "react";
 export const api = AXIOS.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: `${env("SERVER_URL")}/api`,
+
 });
 
 export const getAllProperties = async () => {
