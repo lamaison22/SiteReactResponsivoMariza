@@ -8,10 +8,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Auth0Provider  domain="dev-vo4123tdnp7bcuws.us.auth0.com" clientId="QIbYsCN57OXNvgjcBLAD8rCVHIW1WSYN" 
     authorizationParams={{
-      redirect_uri:"http://localhost:5173",
+      redirect_uri:import.meta.env.VITE_APP_URL,
       
     } }
-    audience ="http://localhost:8000"
+    audience ={import.meta.env.VITE_SERVER_URL}
     scope= "openid user email"
     >
       
