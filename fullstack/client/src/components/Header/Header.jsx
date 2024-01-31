@@ -22,7 +22,7 @@ const Header = () => {
     }
   }
   function testaEmail(user) {
-    if (user?.email === "heavychilden@gmail.com") {
+    if (user?.email === "marizalamaison22@gmail.com") {
       return true;
     } else return false;
   }
