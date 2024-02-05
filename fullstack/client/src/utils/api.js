@@ -17,7 +17,7 @@ export const getAllProperties = async () => {
     }
     return response.data;
   } catch (error) {
-    toast.error("Algo deu errado");
+    toast.error("Algo deu errado ao pegar todas as propriedades");
     throw error;
   }
 };
@@ -32,7 +32,7 @@ export const getProperty = async (id) => {
     }
     return response.data;
   } catch (error) {
-    toast.error("Algo deu errado");
+    toast.error("Algo deu errado ao pegar todas as propriedades 2");
     throw error;
   }
 };
@@ -49,7 +49,7 @@ export const createUser = async (email, token) => {
       }
     );
   } catch (error) {
-    toast.error("Algo deu errado");
+    toast.error("Algo deu errado ao criar usuario");
     throw error;
   }
 };
@@ -70,7 +70,7 @@ export const bookVisit = async (date, propertyId, email, token) => {
       }
     );
   } catch (error) {
-    toast.error("Algo deu errado tente novamente");
+    toast.error("Algo deu errado ao marcar visita");
     throw error;
   }
 };
@@ -88,7 +88,7 @@ export const removeBooking = async (id, email, token) => {
       }
     );
   } catch (error) {
-    toast.error("Algo deu errado");
+    toast.error("Algo deu errado ao remover visita");
     throw error;
   }
 };
@@ -163,7 +163,7 @@ export const createResidency = async (data, token) => {
     );
     console.log(res);
   } catch (error) {
-    toast.error("Algo deu errado");
+    toast.error("Algo deu errado ao criar uma residencia");
     throw error;
   }
 };
@@ -181,7 +181,7 @@ export const updateResidency = async (data, token) => {
     console.log(res);
   } catch (error) {
     console.log("caiu no erro update");
-    toast.error("Algo deu errado");
+    toast.error("Algo deu errado ao editar uma residencia");
     throw error;
   }
 };
@@ -200,7 +200,7 @@ export const deleteResidency = async (data, token) => {
     );
   } catch (error) {
     console.log("caiu no erro delete");
-    toast.error("Algo deu errado");
+    toast.error("Algo deu errado ao excluir uma residencia");
     throw error;
   }
 };
