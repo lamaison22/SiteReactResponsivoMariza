@@ -142,19 +142,6 @@ function Property() {
       </div>
     );
   }
-  const SlideNextButton = () => {
-    const swiper = useSwiper();
-    return (
-      <div className="flex r-buttons" id="swiperBotao">
-        <button onClick={() => swiper.slidePrev()} className="r-prevButton" >
-          &lt;
-        </button>
-        <button onClick={() => swiper.slideNext()} className="r-nextButton">
-          &gt;
-        </button>
-      </div>
-    );
-  };
 
   return (
     <div className="wrapper">

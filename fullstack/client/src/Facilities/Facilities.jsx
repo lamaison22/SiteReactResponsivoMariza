@@ -22,12 +22,7 @@ function Facilities({
       bedrooms: propertyDetails?.facilities?.bedrooms,
       parkings: propertyDetails?.facilities?.parkings,
       bathrooms: propertyDetails?.facilities?.bathrooms,
-    },
-    validate: {
-      bedrooms: (value) => (value < 1 ? "Deve ter ao menos um quarto" : null),
-      bathrooms: (value) =>
-        value < 1 ? "Deve ter ao menos um banheiro" : null,
-    },
+    }
   });
   console.log(propertyDetails);
   if (propertyDetails.facilities.bedrooms != 0) {
