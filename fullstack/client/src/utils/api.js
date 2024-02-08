@@ -121,7 +121,7 @@ export const getAllFav = async (email, token) => {
         },
       }
     );
-    console.log("res1", res);
+    // console.log("res1", res);
 
     return res.data["favoriteResidenciesId"];
   } catch (error) {
@@ -142,7 +142,7 @@ export const getAllBookings = async (email, token) => {
         },
       }
     );
-    console.log("res", res);
+    // console.log("res", res);
     return res.data["bookedVisits"];
   } catch (error) {
     toast.error("Algo deu errado ao obter agendamentos");
@@ -161,7 +161,7 @@ export const createResidency = async (data, token) => {
         },
       }
     );
-    console.log(res);
+    // console.log(res);
   } catch (error) {
     toast.error("Algo deu errado ao criar uma residencia");
     throw error;
@@ -178,9 +178,9 @@ export const updateResidency = async (data, token) => {
         },
       }
     );
-    console.log(res);
+    // console.log(res);
   } catch (error) {
-    console.log("caiu no erro update");
+    // console.log("caiu no erro update");
     toast.error("Algo deu errado ao editar uma residencia");
     throw error;
   }
@@ -199,7 +199,7 @@ export const deleteResidency = async (data, token) => {
       }
     );
   } catch (error) {
-    console.log("caiu no erro delete");
+    // console.log("caiu no erro delete");
     toast.error("Algo deu errado ao excluir uma residencia");
     throw error;
   }

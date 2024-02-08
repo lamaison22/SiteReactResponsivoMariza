@@ -24,11 +24,9 @@ function Facilities({
       bathrooms: propertyDetails?.facilities?.bathrooms,
     }
   });
-  console.log(propertyDetails);
   if (propertyDetails.facilities.bedrooms != 0) {
     editar = true;
   }
-  console.log("editar " + editar);
   const { bedrooms, parkings, bathrooms } = form.values;
 
   const handleSubmit = () => {
@@ -44,7 +42,6 @@ function Facilities({
 
         }
         else if(editar==true){
-          console.log("entrou editar")
           editarNovo()
         }
     }

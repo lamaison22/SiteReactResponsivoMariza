@@ -64,7 +64,6 @@ function Property() {
   const logado = testaEmail(user?.email);
   function testaTipoImovel(tipo) {
     // Use um switch case para verificar o tipo de imóvel
-    console.log(tipo);
     switch (tipo) {
       case "Casa":
         // Retorne uma div com o ícone e a string correspondentes

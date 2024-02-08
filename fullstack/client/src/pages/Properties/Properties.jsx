@@ -43,8 +43,6 @@ export default function Properties() {
 
 
 
-  console.log(cidades);
-  console.log(tipos);
 
   if (isError) {
     return (
@@ -67,9 +65,7 @@ export default function Properties() {
   return (
     <div className="wrapper">
       <div className="flexColCenter paddings innerWidth properties-container">
-        {/* <SearchBar filter={filter} setFilter={setFilter} /> */}
-        {/* <Filtros filtra={filtra} setFiltra={setFiltra}/> */}
-        <div className="flexStart paddings innerWidht properties-container">
+        <div className="flexStart paddings innerWidtgh properties-container">
           <Select
             label="Cidade"
             name="cidade"
@@ -127,7 +123,6 @@ export default function Properties() {
                 <PropertyCard card={card} key={i} />
               ))
           }
-          {console.log(data)}
         </div>
 
         {/* aqui vai as opcoes de seleção */}

@@ -9,7 +9,6 @@ function UploadImage({
   prevStep,
 }) {
   const [imageURL, setImageURL] = useState([]);
-  console.log(imageURL);
   const cloudinaryRef = useRef();
   const widgetRef = useRef();
   const handleNext = () => {
@@ -30,10 +29,6 @@ function UploadImage({
         maxFiles: 3,
       },
       function (error, result) {
-        console.log(result);
-        console.log("possiveis files abaixo: ");
-        console.log(result.info.files);
-
         let aux = new Array(result.info.files.length).fill("");
         let i = 0;
         result.info.files.forEach((element) => {
@@ -72,7 +67,6 @@ function UploadImage({
         <Button onClick={handleNext} disabled={!imageURL}>
           Proximo
         </Button>
-        {console.log(propertyDetails)}
       </Group>
     </div>
   );

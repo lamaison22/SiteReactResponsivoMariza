@@ -59,17 +59,14 @@ function BasicDetails({
     const { hasErrors } = form.validate();
     if (!hasErrors) {
       
-      console.log(form);
-      console.log("preco inserido: "+price)
+     
       let faixa=verificaFaixa(price)
-      console.log("faixa encaixada: "+faixa)
 
       setPropertyDetails((prev) => ({ ...prev, description, price, title,type,faixa }));
-      console.log(propertyDetails)
 
       nextStep();
     } else {
-      console.log("salamakdkao");
+      console.log("Ok");
     }
   };
 

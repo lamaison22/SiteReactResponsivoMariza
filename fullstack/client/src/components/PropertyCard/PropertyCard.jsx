@@ -2,7 +2,7 @@ import React from 'react'
 import { SwiperSlide } from 'swiper/react'
 import './PropertyCard.css'
 import {AiFillHeart} from 'react-icons/ai'
-import {truncate} from "loadsh"
+import {truncate} from "lodash"
 import {useNavigate} from "react-router-dom"
 import Heart from '../Heart/Heart'
 const PropertyCard =({card}) =>  {
@@ -16,7 +16,7 @@ const PropertyCard =({card}) =>  {
         <span style={{ color: "orange" }}> R$ </span>
         <span>{card.price}</span>
       </span> 
-      <span className="primaryText">{truncate (card.title , {lenght:15})}</span>
+      <span className="primaryText">{truncate (card.title ,{length:25})}</span>
       <span className="secondaryText">{ truncate (card.description, {length:80})}</span>
     </div>
   )

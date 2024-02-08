@@ -2,7 +2,7 @@ import asyncHandler from 'express-async-handler'
 import { prisma } from '../config/prismaConfig.js'
 export const createProperty = asyncHandler(async(req,res)=>{
     const {title, description, price, address,type, faixa, country,city,facilities,image,userEmail}=req.body.data    
-    console.log("no createProperty: "+req.body.data)
+    // console.log("no createProperty: "+req.body.data)
     try{
         const property = await prisma.property.create({
             data:{title, 

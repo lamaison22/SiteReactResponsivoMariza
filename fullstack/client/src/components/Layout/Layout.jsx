@@ -32,7 +32,7 @@ export default function Layout() {
       })
       localStorage.setItem("access_token", res)
       setUserDetails((prev)=>({...prev , token:res}))
-      console.log(res)
+      // console.log(res)
       mutate(res)
     }
     isAuthenticated && getTokenAndRegister()
