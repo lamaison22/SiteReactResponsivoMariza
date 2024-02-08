@@ -33,5 +33,5 @@ model Property {
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    @@unique(fields: [address,userEmail])
+   
 }

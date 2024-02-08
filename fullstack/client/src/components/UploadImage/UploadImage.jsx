@@ -29,6 +29,8 @@ function UploadImage({
         maxFiles: 3,
       },
       function (error, result) {
+
+
         let aux = new Array(result.info.files.length).fill("");
         let i = 0;
         result.info.files.forEach((element) => {
