@@ -8,7 +8,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Auth0Provider  domain="dev-vo4123tdnp7bcuws.us.auth0.com" clientId="QIbYsCN57OXNvgjcBLAD8rCVHIW1WSYN" 
     authorizationParams={{
-      redirect_uri:"https://site-react-responsivo-mariza-58tp.vercel.app",
+      redirect_uri:"https://lamaisonimoveis.com.br",
       
     } }
     audience ={import.meta.env.VITE_SERVER_URL}
