@@ -1,4 +1,5 @@
 .v-container .image-container {
+  
   border: 8px solid rgb(232 232 232 / 93%);
 }
 .v-container > div {
@@ -46,6 +47,7 @@
 
 @media (max-width: 1024px) {
     .v-container{
+      padding-top: 3rem;
         flex-direction: column;
     }
 }
