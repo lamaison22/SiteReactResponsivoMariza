@@ -2,13 +2,13 @@ import { Container, Modal, Stepper } from "@mantine/core";
 import React, { useState } from "react";
 import AddLocation from "../AddLocation/AddLocation";
 import { useAuth0 } from "@auth0/auth0-react";
-import UploadImage from "../UploadImage/UploadImage";
 import BasicDetails from "../BasicDetails/BasicDetails";
 import Facilities from "../../Facilities/Facilities";
 import { useDisclosure } from '@mantine/hooks';
 import { getProperty } from "../../utils/api";
 import { useQuery } from "react-query";
 import { useLocation } from "react-router-dom";
+import UploadImageEdit from "../../UploadImageEdit/UploadImageEdit";
 
 function EditPropertyModal({opened, setOpened, email }) {
     const { pathname } = useLocation();
@@ -58,9 +58,10 @@ function EditPropertyModal({opened, setOpened, email }) {
         >
           <Stepper.Step label="Localização" description="Insira o endereço">
             <AddLocation nextStep={nextStep} propertyDetails={propertyDetails}setPropertyDetails={setPropertyDetails}/>
+            {console.log("log no editar prop "+propertyDetails)}
           </Stepper.Step>
           <Stepper.Step label="Imagens" description="Enviar Imagens">
-            <UploadImage prevStep={prevStep} nextStep={nextStep} propertyDetails={propertyDetails} setPropertyDetails={setPropertyDetails} />
+            <UploadImageEdit prevStep={prevStep} nextStep={nextStep} propertyDetails={propertyDetails} setPropertyDetails={setPropertyDetails} />
           </Stepper.Step>
           <Stepper.Step label="Infos" description="Detalhe">
             <BasicDetails nextStep={nextStep} propertyDetails={propertyDetails}setPropertyDetails={setPropertyDetails} />

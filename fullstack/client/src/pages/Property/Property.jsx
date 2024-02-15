@@ -13,7 +13,8 @@ import {
 import { HiBuildingStorefront } from "react-icons/hi2";
 import { MdMeetingRoom, MdLocationPin } from "react-icons/md";
 import { AiFillHeart, AiTwotoneCar } from "react-icons/ai";
-import { GiFamilyHouse } from "react-icons/gi";
+import { GiFamilyHouse,GiFarmTractor,GiGasPump } from "react-icons/gi";
+import { BsBuildingAdd } from "react-icons/bs";
 
 import "./Property.css";
 import Map from "../../components/Map/Map";
@@ -28,8 +29,6 @@ import EditPropertyModal from "../../components/EditPropertyModal/EditPropertyMo
 import DeletePropertyModal from "../../components/DeletePropertyModal/DeletePropertyModal.jsx";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { sliderSettings } from "../../utils/common.js";
-import PropertyCard from "../../components/PropertyCard/PropertyCard.jsx";
 function Property() {
   const { pathname } = useLocation();
   const id = pathname.split("/").slice(-1)[0];
@@ -115,6 +114,27 @@ function Property() {
             <GiFamilyHouse size={20} color="#1F3E72" /> Sobrado
           </div>
         );
+      case "Posto de Combustível":
+        // Retorne uma div com o ícone e a string correspondentes
+        return (
+          <div>
+            <GiGasPump size={20} color="#1F3E72" /> Posto de Combustível
+          </div>
+        );
+      case "Sala Comercial":
+        // Retorne uma div com o ícone e a string correspondentes
+        return (
+          <div>
+            <BsBuildingAdd  size={20} color="#1F3E72" /> Sala Comercial
+          </div>
+        );
+      case "Sítio":
+        // Retorne uma div com o ícone e a string correspondentes
+        return (
+          <div>
+            <GiFarmTractor  size={20} color="#1F3E72" /> Sítio
+          </div>
+        );
       default:
         // Retorne uma div com uma mensagem de erro se o tipo de imóvel não for reconhecido
         return <div>Tipo de imóvel inválido</div>;
@@ -150,7 +170,6 @@ function Property() {
         </div>
         {/* <img src={data?.image[0]} alt="home image" /> */}
 
-       
         <div className="paddings innerWidth r-container">
           <Swiper
             navigation
@@ -160,12 +179,16 @@ function Property() {
           >
             {data?.image.map((image, index) => (
               <SwiperSlide key={index}>
-                <img src={image} alt={`Imagem ${index + 1}`} className="swiper-image" />
+                <img
+                  src={image}
+                  alt={`Imagem ${index + 1}`}
+                  className="swiper-image"
+                />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-          
+
         <div className="flexCenter property-details">
           {/* esquerda da pagina */}
 

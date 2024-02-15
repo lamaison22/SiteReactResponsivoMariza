@@ -1,31 +1,30 @@
 import React, { useEffect, useRef, useState } from "react";
-import { AiOutlineCloudUpload } from "react-icons/ai";
-import "./UploadImage.css";
+import "./UploadImageEdit.css";
 import { Button, Group } from "@mantine/core";
-function UploadImage({
+function UploadImageEdit({
   propertyDetails,
   setPropertyDetails,
   nextStep,
   prevStep,
 }) {
-  const [imageURL, setImageURL] = useState([]);
+  const [imageURL, setImageURL] = useState([propertyDetails.image]);
   const cloudinaryRef = useRef();
   const widgetRef = useRef();
-
-  let editar= false
-  if(propertyDetails.image.length != 0){
-    editar=true
-    console.log("aqui o true: "+editar)
-  }
-
   const handleNext = () => {
-    setPropertyDetails((prev) => ({
-      ...prev,
-      image: imageURL,
-    }));
+    if(alterar==true){
+        setPropertyDetails((prev) => ({
+            ...prev,
+            image: imageURL,
+          }));
+          nextStep();
+    }
+    else{
     nextStep();
+
+    }
   };
-  
+  const [alterar, setAlterar]=useState(false);
+
 
   useEffect(() => {
     cloudinaryRef.current = window.cloudinary;
@@ -37,10 +36,10 @@ function UploadImage({
         maxFiles: 3,
       },
       function (error, result) {
-
-
+      
         let aux = new Array(result.info.files.length).fill("");
         let i = 0;
+        console.log(result.info.files)
         result.info.files.forEach((element) => {
           aux[i] = element.uploadInfo.secure_url;
           i++;
@@ -54,32 +53,23 @@ function UploadImage({
   }, []);
   return (
     <div className="flexColCenter uploadWrapper">
-      {!imageURL ? (
-        <div
-          className="flexColCenter uploadZone"
-          onClick={() => widgetRef.current?.open()}
-        >
-          <AiOutlineCloudUpload size={50} color="grey" />
-          Enviar Imagem
-        </div>
-      ) : (
+      <Button onClick={ ()=>setAlterar(true)} disabled={alterar==true}>
+        Clique para alterar as imagens
+      </Button>
+
+      {alterar == true ? (
         <div
           className="uploadedImage"
           onClick={() => widgetRef.current?.open()}
         >
-          <img src={imageURL[0]} alt="" />
+          <img src={imageURL[0][0]} alt="" />
         </div>
+      ) : (
+        console.log("")
       )}
-      <Group position="center" mt={"xl"}>
-        <Button variant="default" onClick={prevStep}>
-          Voltar
-        </Button>
-        <Button onClick={handleNext} disabled={!imageURL}>
-          Proximo
-        </Button>
-      </Group>
+       <Button onClick={handleNext}>Próximo</Button>
     </div>
   );
 }
 
-export default UploadImage;
+export default UploadImageEdit;

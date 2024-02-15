@@ -24,6 +24,7 @@ function AddLocation({propertyDetails,setPropertyDetails,nextStep}) {
         const {hasErrors}=form.validate()
         if(!hasErrors){
             setPropertyDetails((prev)=>({...prev,city,address,country}))
+            console.log("no add location "+propertyDetails.image)
             nextStep()
         }
     }

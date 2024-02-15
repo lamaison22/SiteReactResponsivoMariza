@@ -102,7 +102,7 @@ function BasicDetails({
           label="Tipo de imóvel"
           placeholder="Selecione"
           searchable
-          data={["Terreno", "Barracao", "Apartamento", "Casa", "Chácara","Terra","Sobrado"]}
+          data={["Terreno", "Barracao", "Apartamento", "Casa", "Chácara","Terra","Sobrado","Posto de Combustível","Sala Comercial","Sítio"]}
           radius={"xl"}
           defaultValue={"Todas"}
           nothingFound="No options"
