@@ -14,7 +14,9 @@ const Footer = () => {
         </div>
 
         <div className="flexColStart f-right">
-          <span className="primaryText">Informações</span>
+          <span className="primaryText">CRECI-SC 30283</span>
+          <span className="secondaryText">Corretora de Imóveis</span>
+
           <span className="secondaryText">Chapecó SC</span>
         
         </div>
